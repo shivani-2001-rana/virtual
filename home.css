@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+}  
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden; 
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("homebg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transform: scaleX(1.25); 
+    z-index: -1;
+}
+
+
+.main {
+    height: 500px;
+    width: 350px;
+    text-align: center;
+    color: white; 
+    background-color: rgb(77, 166, 166);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.main .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+.inp1, 
+.inp2 {
+    border: none;
+    background-color: white;
+    border-bottom: 2px solid white;
+    width: 250px;
+    font-size: 20px;
+    height: 44px; 
+    margin-top: 20px;
+    outline: none;
+    color: black;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+.password-wrapper {
+    position: relative;
+    width: 250px;
+    margin: 20px auto;
+}
+.password-wrapper .inp2 {
+    width: 100%; 
+    padding-right: 40px; 
+    box-sizing: border-box; 
+}
+.password-wrapper i {
+    position: absolute;
+    top: 65%; 
+    right: 10px; 
+    transform: translateY(-50%); 
+    cursor: pointer;
+    font-size: 20px;
+    color: #888;
+}
+.password-wrapper i:hover {
+    color: #333;
+}
+.text button {
+    width: 250px;
+    height: 44px;
+    background-color: plum;
+    color: black;
+    border: none;
+    font-size: 22px;
+    border-radius: 25px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+button:hover {
+    border: 3px solid yellow;
+    color: white;
+    font-size: 20px;
+    background-color: black;
+}
+p {
+    margin-top: 30px;
+    font-size: 20px;
+}
+p span {
+    color: aqua;
+}
+
+#captchaContainer {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: rgb(77, 166, 166); 
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+#captchaText {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 10px; 
+}
+
+#captcha {
+    width: 200px;
+    height: 35px;
+    font-size: 16px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    text-align: center;
+}
+
+#captchaError {
+    font-size: 14px;
+    color: red;
+    margin-top: 5px;
+}
